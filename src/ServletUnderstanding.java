@@ -32,10 +32,13 @@ public class ServletUnderstanding extends HttpServlet {
 		
 		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
-		out.println("<html><body>");
-		out.println("<p>Hi this repo is for servlet understanding</p>");
-		out.println("</body></html>");
+//		out.println("<html><body>");
+//		out.println("<p>Hi this repo is for servlet understanding</p>");
+//		out.println("</body></html>");
 		
+	String name=request.getParameter("name");
+	out.println("welcome"+name);
+	out.close();
 	}
 
 	/**

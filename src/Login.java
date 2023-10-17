@@ -31,5 +31,14 @@ public class Login extends HttpServlet {
 			RDI.include(Req, Res);
 		}
 	}
+	
+	public void doGet(HttpServletRequest Req,HttpServletResponse Res) throws IOException,ServletException{
+		
+		Res.setContentType("text/html");
+		String name=Req.getParameter("U-N");
+		Res.sendRedirect("https://www.google.co.in/#q="+name);
+		
+		
+	}
 
 }

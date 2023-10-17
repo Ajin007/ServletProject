@@ -3,6 +3,7 @@ import java.io.PrintWriter;
 import java.rmi.server.ServerCloneException;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -36,7 +37,20 @@ public class Login extends HttpServlet {
 		
 		Res.setContentType("text/html");
 		String name=Req.getParameter("U-N");
+		
 		Res.sendRedirect("https://www.google.co.in/#q="+name);
+		
+		//adding servletconfig file
+		
+		ServletConfig config=getServletConfig();
+		String driver=config.getInitParameter("driver");
+		
+		//for seervlet config
+		Res.setContentType("text/html");
+		PrintWriter out=Res.getWriter();
+		
+		out.println("Driver :"+driver);
+		
 		
 		
 	}

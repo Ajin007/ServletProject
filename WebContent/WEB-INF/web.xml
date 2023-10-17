@@ -3,6 +3,10 @@
   <servlet>  
     <servlet-name>Login</servlet-name>  
     <servlet-class>Login</servlet-class>  
+    <init-param>  
+<param-name>driver</param-name>  
+<param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>  
+</init-param>  
   </servlet>  
   <servlet>  
     <servlet-name>FinalServlet</servlet-name>  
